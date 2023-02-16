@@ -43,7 +43,7 @@ const Nav = () => {
                             </a>
                         </li>
                         <li className="menu__list" onClick={closeMenu}>
-                            <a href="" className="menu__link">
+                            <a href="/" className="menu__link">
                                 Books
                             </a>
                         </li>
