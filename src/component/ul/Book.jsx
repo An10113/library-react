@@ -1,16 +1,17 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Link } from "react-router-dom";
 
 const Book = ({book}) => {
    return ( <div className="book">
-        <a href="">
+        <Link to="/BookInfo">
             <figure className="book__img--wrapper">
                 <img src={book.url} alt="" className="book__img"/>
             </figure>
         <div className="book__title">
-            <a href="" className="book__link">
+            <Link to="" className="book__link">
                 {book.title}
-            </a>
+            </Link>
         </div>
         <div className="book__ratings">
             {
@@ -29,7 +30,7 @@ const Book = ({book}) => {
                 <>{book.originalPrice.toFixed(2)}$</>
             )}
         </div>
-        </a>
+        </Link>
     </div>
    )
 }
