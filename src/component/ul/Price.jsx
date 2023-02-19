@@ -3,14 +3,17 @@ import React from "react";
 const Price =({originalPrice, salePrice}) =>{
     return(
         <div className="book__price">
-            {salePrice !== null ?
-            (<>
-            <span className="book__price--normal">{originalPrice}$</span>{salePrice}$
-            </>
-            ): (
-                <>{originalPrice}$</>
-            )}
-        </div>
+        {salePrice ? (
+          <>
+            <span className="book__price--normal">
+              ${originalPrice.toFixed(2)}
+            </span>
+            ${salePrice.toFixed(2)}
+          </>
+        ) : (
+          `$${originalPrice.toFixed(2)}`
+        )}
+      </div>
     )
 }
 

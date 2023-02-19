@@ -1,9 +1,9 @@
 import React from "react";
-import Highlights from "./Highlights";
-import Landing from "./Landing";
-import Discounted from "./Discounted";
-import Explore from "./Explore";
-import Featured from "./Featured";
+import Highlights from "../component/Highlights";
+import Landing from "../component/Landing";
+import Discounted from "../component/Discounted";
+import Explore from "../component/Explore";
+import Featured from "../component/Featured";
 const Home = () => {
     return(
         <div>
