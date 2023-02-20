@@ -57,8 +57,17 @@ const Cart = () => {
                                 <span>$9.00</span>
                             </div>
                             <div className="total__item total__tax">
-                                
+                            <span>Tax</span>
+                            <span>Tax</span>
                             </div>
+                            <div className="total__item total__price">
+                                <span>Total</span>
+                                <span>1004</span>
+                            </div>
+                            <button className="btn btn__checkout no-cursor"
+                            onClick={()=> alert('wht tf you buy books here')}>
+                                Proceed to checkout
+                            </button>
                         </div>
                     </div>
                 </div>
