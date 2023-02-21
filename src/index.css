@@ -730,6 +730,7 @@ select {
   max-width: 300px;
   margin-left: auto;
   font-size: 16px;
+  margin-bottom: 50px;
 }
 
 .total__item {
@@ -754,6 +755,7 @@ select {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .cart__empty--img {
