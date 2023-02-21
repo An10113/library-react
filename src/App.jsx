@@ -7,6 +7,7 @@ import { books } from "./data"
 import BookInfo from "./Pages/BookInfo";
 import Cart from "./Pages/Cart";
 import { useEffect, useState } from "react";
+import { c } from "tar";
 
 function App() {
   const [cart,setCart] = useState([])
@@ -21,15 +22,9 @@ function App() {
               ...item,
               quantity: +quantity
             }
-          
           : item
         ))
           }
-
-  useEffect(() => {
-    console.log(cart)
-  },[cart])
-
   return (
     <Router>
     <div className="App">
@@ -38,7 +33,7 @@ function App() {
       <Route path="/books" exact render={() => <Books books={books} />} />
       <Route path="/books/:id" render={() => <BookInfo books={books} addtoCart={addtoCart} cart={cart}/>} />
       <Route path="/cart" render={() => 
-      <Cart cart={cart} changeQuantity={changeQuantity}/>} />
+      <Cart cart={cart} changeQuantity={changeQuantity} />} />
       <Footer />
     </div>
     </Router>
