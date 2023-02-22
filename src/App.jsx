@@ -29,10 +29,17 @@ function App() {
       setCart(cart.filter(book => book.id !== item.id))
     }
 
+    function numberofItem(){
+      let counter = 0
+      cart.forEach(item => 
+        {counter += item.quantity})
+        return counter
+    }
+
   return (
     <Router>
     <div className="App">
-        <Nav />
+        <Nav numberofItem={numberofItem()}/>
       <Route path="/" exact component={Home} />
       <Route path="/books" exact render={() => <Books books={books} />} />
       <Route path="/books/:id" render={() => <BookInfo books={books} addtoCart={addtoCart} cart={cart}/>} />
